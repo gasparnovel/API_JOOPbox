@@ -1,6 +1,8 @@
 from flask import Flask
 from flask_restful import Resource, Api
 from domain.return_data import Return_data
+from domain.failed import Failed
+from domain.list import List
 
 app = Flask(__name__)
 api = Api(app)
