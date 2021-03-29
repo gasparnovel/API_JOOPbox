@@ -1,0 +1,21 @@
+{
+  "type": "object",
+  "properties": {
+    "name":     { "type": "string" },
+    "id":       { "type": "string" },
+    "phone_number": { "type": "number" },
+    "street_name":  { "type": "string" },
+    "street_type":  {
+      "type": "string",
+      "enum": ["Street", "Avenue", "Boulevard","Square", "Other"]
+    },
+    "birth_date":  { "type": "string" },
+    "email":  { "type": "string" },
+    "interests": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "required": ["name","id","phone_number"],
+  "additionalProperties":false
+}
