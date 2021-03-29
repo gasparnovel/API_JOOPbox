@@ -7,8 +7,8 @@ from domain.list import List
 # copia de api.py para testear
 def create_app():
     app = Flask(__name__)
-    api = Api(app)
-
+    api = Api(app, catch_all_404s=True)
+    
     api.add_resource(Return_data, '/')
     api.add_resource(List, '/list')
     api.add_resource(Failed, '/failed')

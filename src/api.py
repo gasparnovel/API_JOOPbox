@@ -5,7 +5,7 @@ from domain.failed import Failed
 from domain.list import List
 
 app = Flask(__name__)
-api = Api(app)
+api = Api(app, catch_all_404s=True)
 
 api.add_resource(Return_data, '/')
 api.add_resource(List, '/list')
